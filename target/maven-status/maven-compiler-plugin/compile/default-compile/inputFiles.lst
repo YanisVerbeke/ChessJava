@@ -1,8 +1,8 @@
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/interf/IChess.java
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/interf/ChessException.java
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/game/ChessModel.java
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
-/Users/verbekeyanis/Documents/POO Avancee/ChessJava/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/interf/ChessException.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/interf/IChess.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/game/ChessModel.java
+/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
