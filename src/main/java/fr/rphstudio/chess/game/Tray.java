@@ -4,7 +4,7 @@ import fr.rphstudio.chess.interf.IChess;
 
 public class Tray {
 
-	private Piece[][] table = new Piece[8][8];
+	private Piece[][] table = new Piece[IChess.BOARD_HEIGHT][IChess.BOARD_WIDTH];
 	public Tray() {
 
 		table[0][0] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_ROOK);
@@ -45,5 +45,17 @@ public class Tray {
 
 	public Piece getPiece(IChess.ChessPosition pos) {
 		return table[pos.x][pos.y];
+	}
+
+	public int getNbPieces(IChess.ChessColor color) {
+		int count = 0;
+		for(int i = 0; i < IChess.BOARD_HEIGHT; i++) {
+			for(int j = 0; j < IChess.BOARD_WIDTH; j++) {
+				if (table[i][j] != null && color == table[i][j].getChessColor()) {
+					count++;
+				}
+			}
+		}
+		return count;
 	}
 }
