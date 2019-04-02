@@ -46,9 +46,4 @@ public class Tray {
 	public Piece getPiece(IChess.ChessPosition pos) {
 		return table[pos.x][pos.y];
 	}
-
-	public void Movemnt(IChess.ChessPosition pos0, IChess.ChessPosition pos1) {
-		table[pos1.x][pos1.y] = table[pos0.x][pos0.y];
-		table[pos0.x][pos0.y] = null;
-	}
 }

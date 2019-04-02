@@ -16,5 +16,8 @@ public class Knight implements IMove {
 		listPos.add(new IChess.ChessPosition(pos.x+1,pos.y));
 		return listPos;
 
+
+
+				//(pos.xFinish - pos.xStart >=2 || pos.yFinish - pos.yStart >=2)
 	}
 }
