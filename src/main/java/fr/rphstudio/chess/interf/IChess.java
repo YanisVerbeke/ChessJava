@@ -259,7 +259,7 @@ public interface IChess
      * @param p requested piece position.
      * @return the list of possible moves for the requested piece position. The returned list reference must not be null.
      */
-    public List<ChessPosition> getPieceMoves(ChessPosition p);
+    public List<ChessPosition> getPieceMoves(ChessPosition p) throws OutOfBoardException;
 
     /**
      * Moves a piece from a position to another.

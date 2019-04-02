@@ -61,13 +61,21 @@ public class ChessModel implements IChess {
     }
 
     @Override
-    public List<ChessPosition> getPieceMoves(ChessPosition p) {
-        return new ArrayList<>();
+    public List<ChessPosition> getPieceMoves(ChessPosition p) throws OutOfBoardException {
+        if(p.x < 0 | p.x > 7 | p.y < 0 | p.y > 7) {
+            throw new OutOfBoardException();
+        }
+        Piece pi = this.tray.getPiece(p);
+        if(pi != null) {
+           return pi.getMove(p, tray);
+
+        }
+        return new ArrayList<ChessPosition>();
     }
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
-
+        this.tray.Movemnt(p0, p1);
     }
 
     @Override
