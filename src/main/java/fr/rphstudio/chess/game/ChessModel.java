@@ -75,7 +75,7 @@ public class ChessModel implements IChess {
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
-        this.tray.Movemnt(p0, p1);
+
     }
 
     @Override
