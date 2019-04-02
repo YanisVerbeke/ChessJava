@@ -7,7 +7,7 @@ public class Tray {
 	private Piece[][] table = new Piece[8][8];
 	public Tray() {
 
-		table[0][0] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_KING);
+		table[4][0] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_KING);
 
 	}
 
