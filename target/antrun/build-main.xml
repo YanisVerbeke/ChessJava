@@ -2,11 +2,27 @@
 <project name="maven-antrun-" default="main"  >
 <target name="main">
   <echo>Using env.test.properties</echo>
+<<<<<<< Updated upstream
+<<<<<<< HEAD
   <copy todir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/../lib">
     <fileset includes="**" dir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/natives"/>
   </copy>
   <copy todir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/..">
     <fileset includes="**" dir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/../src/main/resources"/>
+=======
+  <copy todir="/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/target/../lib">
+    <fileset includes="**" dir="/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/target/natives"/>
+  </copy>
+  <copy todir="/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/target/..">
+    <fileset includes="**" dir="/Users/valbenyquentin/Documents/L1 Coding Fact/Cycle 10 JS+/Chess2/ChessJava/target/../src/main/resources"/>
+>>>>>>> master
+=======
+  <copy todir="/Users/verbekeyanis/Documents/POO Avancee/ChessJava/target/../lib">
+    <fileset includes="**" dir="/Users/verbekeyanis/Documents/POO Avancee/ChessJava/target/natives"/>
+  </copy>
+  <copy todir="/Users/verbekeyanis/Documents/POO Avancee/ChessJava/target/..">
+    <fileset includes="**" dir="/Users/verbekeyanis/Documents/POO Avancee/ChessJava/target/../src/main/resources"/>
+>>>>>>> Stashed changes
   </copy>
 </target>
 </project>
