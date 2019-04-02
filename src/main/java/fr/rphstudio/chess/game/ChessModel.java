@@ -27,27 +27,31 @@ public class ChessModel implements IChess {
 
     @Override
     public void reinit() {
-
+    tray = new Tray();
     }
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-
+        if(p.x < 0 | p.x > 7 | p.y < 0 | p.y > 7) {
+            throw new OutOfBoardException();
+        }
         Piece pi = this.tray.getPiece(p);
         if(pi == null) {
             throw new EmptyCellException();
         }
-        else return pi.getChessType();
+        return pi.getChessType();
     }
 
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-
+        if(p.x < 0 | p.x > 7 | p.y < 0 | p.y > 7) {
+            throw new OutOfBoardException();
+        }
         Piece pi = this.tray.getPiece(p);
         if(pi == null) {
             throw new EmptyCellException();
         }
-        else return pi.getChessColor();
+        return pi.getChessColor();
 
     }
 
