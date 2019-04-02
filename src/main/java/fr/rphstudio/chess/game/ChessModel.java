@@ -32,7 +32,12 @@ public class ChessModel implements IChess {
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        throw new EmptyCellException();
+
+        Piece pi = this.tray.getPiece(p);
+        if(pi == null) {
+            throw new EmptyCellException();
+        }
+        else return pi.getChessType();
     }
 
     @Override
