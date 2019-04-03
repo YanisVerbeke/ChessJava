@@ -1,7 +1,6 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
-import fr.rphstudio.chess.interf.OutOfBoardException;
 
 import java.util.List;
 

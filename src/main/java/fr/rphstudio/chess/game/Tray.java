@@ -88,7 +88,7 @@ public class Tray {
             }
         }
 
-
+        if (kingPos != null) {
         for(int k = 0; k < IChess.BOARD_WIDTH; k++) {
             for (int l = 0; l < IChess.BOARD_HEIGHT; l++) {
                 if (table[k][l] != null) {
@@ -100,6 +100,7 @@ public class Tray {
                             if (listPos.get(n).equals(kingPos)) {
                                 return IChess.ChessKingState.KING_THREATEN;
                             }
+                        }
                         }
                     }
                 }
