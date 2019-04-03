@@ -2,9 +2,6 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.game.pieces.*;
 import fr.rphstudio.chess.interf.IChess;
-import fr.rphstudio.chess.interf.OutOfBoardException;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Tray {
@@ -106,19 +103,8 @@ public class Tray {
                         }
                     }
                 }
-                // vérifier que la piece est non null
-                // vérifier que la coumeur est différente de la nôtre
-                // récup liste de position de coup possible dans une var (liste local)
-                // parcourir dans for => liste position
-                // position courante == celle du roi
-                // si vrais => return false
-
             }
         }
-
-
         return IChess.ChessKingState.KING_SAFE;
-
     }
-
 }
