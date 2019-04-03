@@ -25,7 +25,7 @@ public class Piece {
         return this.t;
     }
 
-    public List<IChess.ChessPosition> getMove(IChess.ChessPosition pos, Tray tray) throws OutOfBoardException {
+    public List<IChess.ChessPosition> getMove(IChess.ChessPosition pos, Tray tray) {
         return this.m.getPossibleMoves(pos, tray);
     }
 

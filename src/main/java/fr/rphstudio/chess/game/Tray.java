@@ -2,6 +2,10 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.game.pieces.*;
 import fr.rphstudio.chess.interf.IChess;
+import fr.rphstudio.chess.interf.OutOfBoardException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tray {
 
@@ -70,6 +74,51 @@ public class Tray {
     public void Movemnt(IChess.ChessPosition pos0, IChess.ChessPosition pos1) {
         table[pos1.x][pos1.y] = table[pos0.x][pos0.y];
         table[pos0.x][pos0.y] = null;
+    }
+
+    public IChess.ChessKingState getKingState(IChess.ChessColor color) {
+
+        IChess.ChessPosition kingPos = null;
+        List<IChess.ChessPosition> listPos = null;
+
+        for(int i = 0; i < IChess.BOARD_WIDTH; i++) {
+            for (int j = 0; j < IChess.BOARD_HEIGHT; j++) {
+                if (table[i][j] != null) {
+                    if (table[i][j].getChessType() == IChess.ChessType.TYP_KING && table[i][j].getChessColor() == color) {
+                        kingPos = new IChess.ChessPosition(i, j);
+                    }
+                }
+            }
+        }
+
+
+        for(int k = 0; k < IChess.BOARD_WIDTH; k++) {
+            for (int l = 0; l < IChess.BOARD_HEIGHT; l++) {
+                if (table[k][l] != null) {
+                    if (table[k][l].getChessColor() != color) {
+                        IChess.ChessPosition pos = new IChess.ChessPosition(k, l);
+                        Piece pi = this.getPiece(pos);
+                        listPos = pi.getMove(pos, this);
+                        for (int n = 0; n < listPos.size(); n++) {
+                            if (listPos.get(n).equals(kingPos)) {
+                                return IChess.ChessKingState.KING_THREATEN;
+                            }
+                        }
+                    }
+                }
+                // vérifier que la piece est non null
+                // vérifier que la coumeur est différente de la nôtre
+                // récup liste de position de coup possible dans une var (liste local)
+                // parcourir dans for => liste position
+                // position courante == celle du roi
+                // si vrais => return false
+
+            }
+        }
+
+
+        return IChess.ChessKingState.KING_SAFE;
+
     }
 
 }

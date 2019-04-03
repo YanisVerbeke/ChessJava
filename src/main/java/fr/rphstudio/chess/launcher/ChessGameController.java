@@ -15,6 +15,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import fr.rphstudio.chess.interf.OutOfBoardException;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -445,8 +447,7 @@ class ChessGameController extends BasicGameState
     /**
      * This method checks all the fields in order to know what is the current game status and what needs to be displayed or not.
      */
-    private void handleStateGames()
-    {
+    private void handleStateGames() {
         // Init possible moves
         this.possiblePos.clear();
                     

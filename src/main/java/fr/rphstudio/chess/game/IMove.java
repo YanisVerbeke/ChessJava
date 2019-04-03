@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface IMove {
 
-    public List<IChess.ChessPosition> getPossibleMoves(IChess.ChessPosition pos, Tray tray) throws OutOfBoardException;
+    public List<IChess.ChessPosition> getPossibleMoves(IChess.ChessPosition pos, Tray tray);
 
 }
