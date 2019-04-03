@@ -9,7 +9,7 @@ public class Tray {
 
     public Tray() {
         // Table
-        this.table = new Piece[8][8];
+        this.table = new Piece[IChess.BOARD_HEIGHT][IChess.BOARD_WIDTH];
 
         // Piece Black
         this.table[0][0] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_ROOK, new Rook());
@@ -53,6 +53,18 @@ public class Tray {
     //PUBLIC PIECE
     public Piece getPiece(IChess.ChessPosition pos) {
         return table[pos.x][pos.y];
+    }
+
+    public int getNbPieces(IChess.ChessColor color) {
+        int count = 0;
+        for(int i = 0; i < IChess.BOARD_HEIGHT; i++) {
+            for(int j = 0; j < IChess.BOARD_WIDTH; j++) {
+                if (table[i][j] != null && color == table[i][j].getChessColor()) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     public void Movemnt(IChess.ChessPosition pos0, IChess.ChessPosition pos1) {

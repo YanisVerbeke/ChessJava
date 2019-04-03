@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo>Using env.test.properties</echo>
+  <copy todir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/../lib">
+    <fileset includes="**" dir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/natives"/>
+  </copy>
+  <copy todir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/..">
+    <fileset includes="**" dir="/Applications/MAMP/htdocs/poo-chess-master/ChessJava/target/../src/main/resources"/>
+  </copy>
+</target>
+</project>
