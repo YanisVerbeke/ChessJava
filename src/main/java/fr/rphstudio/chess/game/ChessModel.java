@@ -27,7 +27,7 @@ public class ChessModel implements IChess {
 
     @Override
     public void reinit() {
-    tray = new Tray();
+        tray = new Tray();
     }
 
     @Override
@@ -57,7 +57,7 @@ public class ChessModel implements IChess {
 
     @Override
     public int getNbRemainingPieces(ChessColor color) {
-        return tray.getNbPieces(color);
+        return 0;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class ChessModel implements IChess {
         }
         Piece pi = this.tray.getPiece(p);
         if(pi != null) {
-           return pi.getMove(p, tray);
+            return pi.getMove(p, tray);
 
         }
         return new ArrayList<ChessPosition>();
