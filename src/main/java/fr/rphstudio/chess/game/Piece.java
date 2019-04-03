@@ -1,6 +1,7 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
+import fr.rphstudio.chess.interf.OutOfBoardException;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class Piece {
         return this.t;
     }
 
-    public List<IChess.ChessPosition> getMove(IChess.ChessPosition pos, Tray tray) {
+    public List<IChess.ChessPosition> getMove(IChess.ChessPosition pos, Tray tray) throws OutOfBoardException {
         return this.m.getPossibleMoves(pos, tray);
     }
 

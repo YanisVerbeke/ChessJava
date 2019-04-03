@@ -12,18 +12,18 @@ public class Queen implements IMove {
     public ArrayList<IChess.ChessPosition> getPossibleMoves(IChess.ChessPosition pos, Tray tray) {
         ArrayList<IChess.ChessPosition> listPos = new ArrayList<>();
 
-        for(int i = 7; i >= 0; i--) {
-            listPos.add(new IChess.ChessPosition(pos.x, pos.y +i));
-            listPos.add(new IChess.ChessPosition(pos.x +i, pos.y));
+        for(int i = 7; i > 0; i--) {
+            if (pos.y + i < IChess.BOARD_WIDTH) listPos.add(new IChess.ChessPosition(pos.x, pos.y +i));
+            if (pos.x + i < IChess.BOARD_HEIGHT) listPos.add(new IChess.ChessPosition(pos.x +i, pos.y));
 
-            listPos.add(new IChess.ChessPosition(pos.x, pos.y -i));
-            listPos.add(new IChess.ChessPosition(pos.x -i, pos.y));
+            if (pos.y - i >= 0) listPos.add(new IChess.ChessPosition(pos.x, pos.y -i));
+            if (pos.x - i >= 0) listPos.add(new IChess.ChessPosition(pos.x -i, pos.y));
 
-            listPos.add(new IChess.ChessPosition(pos.x +i,pos.y +i));
-            listPos.add(new IChess.ChessPosition(pos.x -i, pos.y +i));
+            if (pos.x + i < IChess.BOARD_WIDTH && pos.y + i < IChess.BOARD_HEIGHT) listPos.add(new IChess.ChessPosition(pos.x +i,pos.y +i));
+            if (pos.x - i >=0 && pos.y + i < IChess.BOARD_HEIGHT) listPos.add(new IChess.ChessPosition(pos.x -i, pos.y +i));
 
-            listPos.add(new IChess.ChessPosition(pos.x +i, pos.y -i));
-            listPos.add(new IChess.ChessPosition(pos.x -i, pos.y -i));
+            if (pos.x + i < IChess.BOARD_WIDTH && pos.y - i >=0) listPos.add(new IChess.ChessPosition(pos.x +i, pos.y -i));
+            if (pos.x - i >= 0 && pos.y - i >= 0) listPos.add(new IChess.ChessPosition(pos.x -i, pos.y -i));
         }
         return listPos;
     }

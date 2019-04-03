@@ -11,14 +11,14 @@ public class King implements IMove {
     @Override
     public ArrayList<IChess.ChessPosition> getPossibleMoves(IChess.ChessPosition pos, Tray tray) {
         ArrayList<IChess.ChessPosition> listPos = new ArrayList<>();
-            listPos.add(new IChess.ChessPosition(pos.x, pos.y + 1));
-            listPos.add(new IChess.ChessPosition(pos.x, pos.y - 1));
-            listPos.add(new IChess.ChessPosition(pos.x + 1, pos.y));
-            listPos.add(new IChess.ChessPosition(pos.x - 1, pos.y));
-            listPos.add(new IChess.ChessPosition(pos.x + 1 , pos.y + 1));
-            listPos.add(new IChess.ChessPosition(pos.x - 1, pos.y + 1));
-            listPos.add(new IChess.ChessPosition(pos.x + 1, pos.y - 1));
-            listPos.add(new IChess.ChessPosition(pos.x - 1, pos.y - 1));
+            if (pos.y + 1 < IChess.BOARD_HEIGHT) listPos.add(new IChess.ChessPosition(pos.x, pos.y + 1));
+            if (pos.y - 1 >= 0) listPos.add(new IChess.ChessPosition(pos.x, pos.y - 1));
+            if (pos.x + 1 < IChess.BOARD_WIDTH) listPos.add(new IChess.ChessPosition(pos.x + 1, pos.y));
+            if (pos.x - 1 >=0) listPos.add(new IChess.ChessPosition(pos.x - 1, pos.y));
+            if (pos.x + 1 < IChess.BOARD_WIDTH && pos.y + 1 < IChess.BOARD_HEIGHT) listPos.add(new IChess.ChessPosition(pos.x + 1 , pos.y + 1));
+            if (pos.x - 1 >= 0 && pos.y + 1 < IChess.BOARD_HEIGHT) listPos.add(new IChess.ChessPosition(pos.x - 1, pos.y + 1));
+            if (pos.x + 1 < IChess.BOARD_WIDTH && pos.y - 1 >= 0) listPos.add(new IChess.ChessPosition(pos.x + 1, pos.y - 1));
+            if (pos.x - 1 >= 0 && pos.y - 1 >= 0) listPos.add(new IChess.ChessPosition(pos.x - 1, pos.y - 1));
         return listPos;
     }
 
