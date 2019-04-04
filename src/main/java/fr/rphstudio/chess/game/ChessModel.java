@@ -67,8 +67,16 @@ public class ChessModel implements IChess {
         }
         Piece pi = this.tray.getPiece(p);
         if(pi != null) {
-            return pi.getMove(p, tray);
-
+            List<ChessPosition> listPos = pi.getMove(p, tray);
+            List<ChessPosition> FinalListPos = new ArrayList<ChessPosition>();
+            for(int i = 0; i < listPos.size(); i++) {
+                Tray clone = tray.clone();
+                clone.Movemnt(p, listPos.get(i));
+                if(clone.getKingState(pi.getChessColor()) == ChessKingState.KING_SAFE) {
+                    FinalListPos.add(listPos.get(i));
+                }
+            }
+            return FinalListPos;
         }
         return new ArrayList<ChessPosition>();
     }

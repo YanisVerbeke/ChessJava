@@ -24,8 +24,16 @@ public class Piece {
         return this.t;
     }
 
+    public IMove getMoveType() {
+        return m;
+    }
+
     public List<IChess.ChessPosition> getMove(IChess.ChessPosition pos, Tray tray) {
         return this.m.getPossibleMoves(pos, tray);
     }
 
+    public Piece clone(IChess.ChessColor color, IChess.ChessType type, IMove move) {
+        Piece piece = new Piece(color, type, move);
+        return piece;
+    }
 }

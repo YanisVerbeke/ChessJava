@@ -93,18 +93,18 @@ public class Tray {
         }
 
         if (kingPos != null) {
-        for(int k = 0; k < IChess.BOARD_WIDTH; k++) {
-            for (int l = 0; l < IChess.BOARD_HEIGHT; l++) {
-                if (table[k][l] != null) {
-                    if (table[k][l].getChessColor() != color) {
-                        IChess.ChessPosition pos = new IChess.ChessPosition(k, l);
-                        Piece pi = this.getPiece(pos);
-                        listPos = pi.getMove(pos, this);
-                        for (int n = 0; n < listPos.size(); n++) {
-                            if (listPos.get(n).equals(kingPos)) {
-                                return IChess.ChessKingState.KING_THREATEN;
+            for(int k = 0; k < IChess.BOARD_WIDTH; k++) {
+                for (int l = 0; l < IChess.BOARD_HEIGHT; l++) {
+                    if (table[k][l] != null) {
+                        if (table[k][l].getChessColor() != color) {
+                            IChess.ChessPosition pos = new IChess.ChessPosition(k, l);
+                            Piece pi = this.getPiece(pos);
+                            listPos = pi.getMove(pos, this);
+                            for (int n = 0; n < listPos.size(); n++) {
+                                if (listPos.get(n).equals(kingPos)) {
+                                    return IChess.ChessKingState.KING_THREATEN;
+                                }
                             }
-                        }
                         }
                     }
                 }
@@ -112,4 +112,21 @@ public class Tray {
         }
         return IChess.ChessKingState.KING_SAFE;
     }
+
+    public Tray clone() {
+        Tray Clone = new Tray();
+
+        for(int i = 0; i < 8; i++) {
+            for(int j = 0; j < 8; j++) {
+                IChess.ChessPosition pos = new IChess.ChessPosition(i, j);
+                if(this.table[i][j] != null) {
+                    Clone.table[i][j] = this.table[i][j].clone(table[i][j].getChessColor(), table[i][j].getChessType(), table[i][j].getMoveType());
+                } else {
+                    Clone.table[i][j] = null;
+                }
+            }
+        }
+        return Clone;
+    }
+
 }
