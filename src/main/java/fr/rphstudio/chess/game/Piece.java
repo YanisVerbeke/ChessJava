@@ -4,7 +4,22 @@ import fr.rphstudio.chess.interf.IChess;
 
 import java.util.List;
 
+//--------------------------------------------------------------------
+// PIECE
+//--------------------------------------------------------------------
+
+/**
+ * Creating the Piece class
+ */
+
 public class Piece {
+
+    /**
+     * Initialization of variables
+     * @param color
+     * @param type
+     * @param move
+     */
 
     private IChess.ChessColor c;
     private IChess.ChessType t;
@@ -15,6 +30,11 @@ public class Piece {
         this.t = type;
         this.m = move;
     }
+
+    /**
+     * Recovery of the color of the piece
+     * @return c
+     */
 
     public IChess.ChessColor getChessColor() {
         return this.c;

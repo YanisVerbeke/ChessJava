@@ -6,7 +6,13 @@ import fr.rphstudio.chess.game.Tray;
 import fr.rphstudio.chess.interf.IChess;
 
 import java.util.ArrayList;
+        //--------------------------------------------------------------------
+        // QUEEN MOVMENTS
+        //--------------------------------------------------------------------
 
+        /**
+         * Creating the Queen class
+         */
 public class Queen implements IMove {
 
     @Override

@@ -7,7 +7,13 @@ import fr.rphstudio.chess.interf.IChess;
 
 
 import java.util.ArrayList;
+        //--------------------------------------------------------------------
+        // BISHOP MOVMENTS
+        //--------------------------------------------------------------------
 
+        /**
+         * Creating the Bishop class
+         */
 public class Bishop implements IMove {
 
     @Override

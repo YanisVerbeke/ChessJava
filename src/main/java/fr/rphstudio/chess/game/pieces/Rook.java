@@ -7,6 +7,14 @@ import fr.rphstudio.chess.interf.IChess;
 
 import java.util.ArrayList;
 
+    //--------------------------------------------------------------------
+    // QUEEN MOVMENTS
+    //--------------------------------------------------------------------
+
+    /**
+     * Creating the Queen class
+     */
+
 public class Rook implements IMove {
 
 

@@ -7,7 +7,13 @@ import fr.rphstudio.chess.game.IMove;
 import javafx.scene.control.IndexedCell;
 
 import java.util.ArrayList;
+        //--------------------------------------------------------------------
+        // KNIGHT MOVMENTS
+        //--------------------------------------------------------------------
 
+        /**
+         * Creating the Knight class
+         */
 public class Knight implements IMove {
 
     @Override

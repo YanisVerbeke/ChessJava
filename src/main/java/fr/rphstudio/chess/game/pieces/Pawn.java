@@ -9,6 +9,13 @@ import java.util.ArrayList;
 
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_BLACK;
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_WHITE;
+        //--------------------------------------------------------------------
+        // PAWN MOVMENTS
+        //--------------------------------------------------------------------
+
+        /**
+         * Creating the Pawn class
+         */
 
 public class Pawn implements IMove {
 

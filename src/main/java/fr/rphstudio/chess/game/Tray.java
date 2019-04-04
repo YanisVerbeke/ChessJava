@@ -4,15 +4,24 @@ import fr.rphstudio.chess.game.pieces.*;
 import fr.rphstudio.chess.interf.IChess;
 import java.util.List;
 
+//--------------------------------------------------------------------
+//TRAY
+//--------------------------------------------------------------------
+
 public class Tray {
 
     private Piece[][] table;
 
     public Tray() {
-        // Table
+        /**
+         * Creating the table
+         */
         this.table = new Piece[IChess.BOARD_HEIGHT][IChess.BOARD_WIDTH];
 
-        // Piece Black
+        /**
+         *Default placement of pawns
+         *Black Piece
+         */
         this.table[0][0] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_ROOK, new Rook());
         this.table[1][0] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_KNIGHT, new Knight());
         this.table[2][0] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_BISHOP, new Bishop());
@@ -31,7 +40,10 @@ public class Tray {
         this.table[6][1] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_PAWN, new Pawn());
         this.table[7][1] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_PAWN, new Pawn());
 
-        // Piece White
+        /**
+         *White Piece
+         */
+
         this.table[0][6] = new Piece(IChess.ChessColor.CLR_WHITE, IChess.ChessType.TYP_PAWN, new Pawn());
         this.table[1][6] = new Piece(IChess.ChessColor.CLR_WHITE, IChess.ChessType.TYP_PAWN, new Pawn());
         this.table[2][6] = new Piece(IChess.ChessColor.CLR_WHITE, IChess.ChessType.TYP_PAWN, new Pawn());
@@ -71,6 +83,12 @@ public class Tray {
     public Piece[][] getTable() {
         return table;
     }
+
+    /**
+     * Make the movement
+     * @param pos0 initial pos
+     * @param pos1 finish pos
+     */
 
     public void Movemnt(IChess.ChessPosition pos0, IChess.ChessPosition pos1) {
         table[pos1.x][pos1.y] = table[pos0.x][pos0.y];

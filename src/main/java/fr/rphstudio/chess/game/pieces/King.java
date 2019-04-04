@@ -6,6 +6,13 @@ import fr.rphstudio.chess.game.Tray;
 import fr.rphstudio.chess.interf.IChess;
 
 import java.util.ArrayList;
+    //--------------------------------------------------------------------
+    // KING MOVMENTS
+    //--------------------------------------------------------------------
+
+    /**
+     * Creating the King class
+     */
 
 public class King implements IMove {
 
@@ -13,6 +20,10 @@ public class King implements IMove {
     public ArrayList<IChess.ChessPosition> getPossibleMoves(IChess.ChessPosition pos, Tray tray) {
         ArrayList<IChess.ChessPosition> listPos = new ArrayList<>();
         Piece[][] table = tray.getTable();
+
+        /**
+         * Add movement possibilities
+         */
 
             if (pos.y + 1 < IChess.BOARD_HEIGHT) {
                 if (table[pos.x][pos.y + 1] == null || table[pos.x][pos.y + 1].getChessColor() != tray.getPiece(pos).getChessColor()) {
