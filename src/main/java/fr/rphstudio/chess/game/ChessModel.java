@@ -4,7 +4,11 @@ import fr.rphstudio.chess.interf.EmptyCellException;
 import fr.rphstudio.chess.interf.IChess;
 import fr.rphstudio.chess.interf.OutOfBoardException;
 
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ChessModel implements IChess {
@@ -103,6 +107,30 @@ public class ChessModel implements IChess {
 
     @Override
     public long getPlayerDuration(ChessColor color, boolean isPlaying) {
+        /*
+        int curTimeWhite = 0;
+        int curTimeBlack = 0;
+        int tempTime;
+
+        tempTime = (int) System.currentTimeMillis();
+
+
+        if (color == ChessColor.CLR_BLACK) {
+            if (isPlaying) {
+                curTimeBlack += tempTime;
+            }
+            return curTimeBlack;
+        }
+        if (color == ChessColor.CLR_WHITE) {
+            if (isPlaying) {
+                curTimeWhite += tempTime;
+
+            }
+            return curTimeWhite;
+        }
+
+
+        //return System.currentTimeMillis(); */
         return 0;
     }
 }
