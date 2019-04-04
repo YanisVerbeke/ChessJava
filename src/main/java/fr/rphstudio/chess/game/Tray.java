@@ -75,6 +75,13 @@ public class Tray {
     public void Movemnt(IChess.ChessPosition pos0, IChess.ChessPosition pos1) {
         table[pos1.x][pos1.y] = table[pos0.x][pos0.y];
         table[pos0.x][pos0.y] = null;
+
+        if (table[pos1.x][pos1.y].getChessType() == IChess.ChessType.TYP_PAWN && table[pos1.x][pos1.y].getChessColor() == IChess.ChessColor.CLR_WHITE && pos1.y == 0) {
+            table[pos1.x][pos1.y] = new Piece(IChess.ChessColor.CLR_WHITE, IChess.ChessType.TYP_QUEEN, new Queen());
+        }
+        if (table[pos1.x][pos1.y].getChessType() == IChess.ChessType.TYP_PAWN && table[pos1.x][pos1.y].getChessColor() == IChess.ChessColor.CLR_BLACK && pos1.y == 7) {
+            table[pos1.x][pos1.y] = new Piece(IChess.ChessColor.CLR_BLACK, IChess.ChessType.TYP_QUEEN, new Queen());
+        }
     }
 
     public IChess.ChessKingState getKingState(IChess.ChessColor color) {
